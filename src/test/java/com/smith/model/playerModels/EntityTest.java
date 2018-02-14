@@ -20,21 +20,6 @@ public class EntityTest {
         entityModel = new Entity(testName, testDesc);
     }
 
-/*
-    @Test
-    void getName() {
-        assertEquals(entityModel.getName(),testName);
-    }
-
-    @Test
-    void getDesc() {
-        assertEquals(entityModel.getDesc(),testDesc);
-    }
-
-    @Test
-    void viewEquippedItems() {
-        assertEquals(null, entityModel.viewEquippedItems().get(SlotPlace.Belt));*/
-
     @Test
     void equipPiece() {
         final List<Equippable> equippableList = entityModel.viewEquippedItems().values().stream()

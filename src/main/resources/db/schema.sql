@@ -1,6 +1,9 @@
-CREATE TABLE REAGENT(
-  ReagentID INTEGER NOT NULL,
-  Name varchar(10) DEFAULT NULL,
-  Description varchar(255) DEFAULT NULL,
-  PRIMARY KEY (ReagentID)
+CREATE TABLE Material(
+   pk_material_id INTEGER IDENTITY PRIMARY KEY,
+   name varchar(10) DEFAULT NULL,
+   description varchar(255) DEFAULT NULL,
+   value INTEGER
+)
+CREATE TABLE Reagent(
+  fk_material_id INTEGER UNIQUE FOREIGN KEY REFERENCES Material(pk_material_id)
 );
